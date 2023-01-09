@@ -63,5 +63,6 @@ public:
 private:
     //==============================================================================
     bool shouldPlaySound = true;
+    juce::Random r;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PFMProject0AudioProcessor)
 };
