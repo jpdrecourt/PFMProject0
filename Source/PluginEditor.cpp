@@ -20,6 +20,7 @@ PFMProject0AudioProcessorEditor::PFMProject0AudioProcessorEditor (PFMProject0Aud
 
 PFMProject0AudioProcessorEditor::~PFMProject0AudioProcessorEditor()
 {
+    audioProcessor.shouldPlaySound = false;
 }
 
 //==============================================================================
@@ -41,10 +42,10 @@ void PFMProject0AudioProcessorEditor::resized()
 
 void PFMProject0AudioProcessorEditor::mouseDown(const juce::MouseEvent& e)
 {
-    DBG("Mouse Down");
+    audioProcessor.shouldPlaySound = !audioProcessor.shouldPlaySound;
 }
 
 void PFMProject0AudioProcessorEditor::mouseUp(const juce::MouseEvent& e)
 {
-    DBG("Mouse Up");
+    
 }
